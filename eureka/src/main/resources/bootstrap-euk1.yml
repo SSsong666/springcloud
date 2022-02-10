@@ -11,4 +11,4 @@ eureka:
   client:
     #设置注册中心的url
     service-url:
-      defaultZone: http://euk2.com:7002/eureka/
+      defaultZone: http://euk1.com:7001/eureka/
