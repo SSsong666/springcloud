@@ -1,0 +1,15 @@
+server:
+  port: 81
+spring:
+  profiles:
+    active: euk1
+#  是否优先从文件系统加载template
+  freemarker:
+    prefer-file-system-access: false
+  application:
+    name: provider
+eureka:
+  client:
+    service-url:
+      defaultZone: http://euk1.com:7001/eureka/
+

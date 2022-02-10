@@ -1,0 +1,13 @@
+server:
+  port: 7001
+
+#spring:
+#  application:
+#    name: euk1.com
+eureka:
+  instance:
+    hostname: euk1.com
+  client:
+    #设置注册中心的url
+    service-url:
+      defaultZone: http://euk1.com:7001/eureka/

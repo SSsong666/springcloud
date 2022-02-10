@@ -1,0 +1,16 @@
+#server:
+#  port: 7001
+#eureka:
+#  client:
+    #是否将自己注册到Eureka
+#    register-with-eureka: false
+#    #从Eureka服务上获取注册信息
+#    fetch-registry: false
+spring:
+  profiles:
+    active: euk1
+#  是否优先从文件系统加载template
+  freemarker:
+    prefer-file-system-access: false
+  application:
+    name: EurekaServer
