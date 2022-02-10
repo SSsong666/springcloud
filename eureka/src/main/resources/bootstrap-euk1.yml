@@ -4,10 +4,11 @@ server:
 #spring:
 #  application:
 #    name: euk1.com
+#主机名称对应hosts文件的配置
 eureka:
   instance:
     hostname: euk1.com
   client:
     #设置注册中心的url
     service-url:
-      defaultZone: http://euk1.com:7001/eureka/
+      defaultZone: http://euk2.com:7002/eureka/
