@@ -33,6 +33,12 @@ public class MainController {
 		
 		return "Hi";
 	}
+
+	@GetMapping("/gateway/getHi")
+	public String gatewayGetHi() {
+
+		return "gatewayHi";
+	}
 	
 	
 	@GetMapping("/client")

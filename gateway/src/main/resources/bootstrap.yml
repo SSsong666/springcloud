@@ -1,0 +1,12 @@
+server:
+  port: 8101
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: xxoorouter
+          predicates:
+            - Path=/gateway/**
+          uri: http://localhost:8090
+          filters:
+            - StripPrefix=1
