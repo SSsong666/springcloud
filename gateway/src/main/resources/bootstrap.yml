@@ -1,12 +1,31 @@
 server:
   port: 8101
 spring:
+  application:
+    name: myGateway
   cloud:
     gateway:
+      #从注册中心获取服务列表
+      discovery:
+        locator:
+          enabled: true
       routes:
-        - id: xxoorouter
+        - id: xxooconsumer
+          #断言 Path Query Method Host Cookie
           predicates:
-            - Path=/gateway/**
-          uri: http://localhost:8090
+            - Path=/wsconsumer/**
+          #uri地址后缀必须和服务列表名大小写匹配，gateway默认负载均衡,uri直接写lb即可
+          uri: lb://CONSUMER
+          #忽略path地址的n层级
           filters:
             - StripPrefix=1
+CONSUMER:
+  ribbion:
+    NFLoadBalancerRuleClassName:
+eureka:
+  client:
+    service-url:
+      defaultZone: http://euk1.com:7001/eureka/
+
+
+
