@@ -16,12 +16,13 @@ public class CustomRibbon extends AbstractLoadBalancerRule {
 
     @Override
     public Server choose(Object key) {
-        // TODO Auto-generated method stub
+        // TODO 各种逻辑~~~~
         List<Server> list = this.getLoadBalancer().getReachableServers();
 
         System.out.println(list);
-        // 各种逻辑~~~~
+
         System.out.println("xxoo");
+        //只拿一个服务进行调用
         return list.get(0);
     }
 }

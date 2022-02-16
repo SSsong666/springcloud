@@ -20,8 +20,8 @@ spring:
           filters:
             - StripPrefix=1
 CONSUMER:
-  ribbion:
-    NFLoadBalancerRuleClassName:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.example.gateway.myribbion.CustomRibbon
 eureka:
   client:
     service-url:
