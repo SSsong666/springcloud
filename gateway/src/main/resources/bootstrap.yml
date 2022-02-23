@@ -9,6 +9,22 @@ spring:
       discovery:
         locator:
           enabled: true
+      #权重灰度发布
+#      routes:
+#        - id: ws1
+#          predicates:
+#            - Path=/qwer/**
+#            - Weight=service,95
+#          uri: lb://CONSUMER
+#          filters:
+#            - StripPrefix=1
+#        - id: ws2
+#          predicates:
+#            - Path=/qwer/**
+#            - Weight=service,5
+#          uri: lb://PROVIDER
+#          filters:
+#            - StripPrefix=1
       routes:
         - id: xxooconsumer
           #断言 Path Query Method Host Cookie
