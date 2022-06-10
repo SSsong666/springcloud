@@ -1,13 +1,13 @@
-package com.example.userscommon;
+package com.example.usersprovider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UsersCommonApplication {
+public class UsersProviderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UsersCommonApplication.class, args);
+        SpringApplication.run(UsersProviderApplication.class, args);
     }
 
 }

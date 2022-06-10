@@ -1,10 +1,10 @@
-package com.example.userscommon;
+package com.example.usersprovider;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UsersCommonApplicationTests {
+class UsersProviderApplicationTests {
 
     @Test
     void contextLoads() {
