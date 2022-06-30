@@ -1,11 +1,15 @@
 #server:
 #  port: 8090
 spring:
-#  是否优先从文件系统加载template
+  #  是否优先从文件系统加载template
   freemarker:
     prefer-file-system-access: false
   application:
     name: consumer
+  security:
+    user:
+      name: wangsong
+      password: wang123
 eureka:
   client:
     #将服务注册到的地址
@@ -21,4 +25,13 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     #续约到期时间默认90秒
     lease-expiration-duration-in-seconds: 5
-
+#健康检查开启所有节点信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  #可以远程关闭服务节点
+  endpoint:
+    shutdown:
+      enabled: true
