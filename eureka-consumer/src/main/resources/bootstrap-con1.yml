@@ -1,11 +1,18 @@
 server:
   port: 8091
-spring:
-#  是否优先从文件系统加载template
-  freemarker:
-    prefer-file-system-access: false
-eureka:
-  client:
-    service-url:
-      defaultZone: http://euk1.com:7001/eureka/
+#spring:
+##  是否优先从文件系统加载template
+#  freemarker:
+#    prefer-file-system-access: false
+#eureka:
+#  client:
+#    #服务注册地址
+#    service-url:
+#      defaultZone: http://euk1.com:7001/eureka/
+#    #eureka client间隔多久拉取服务注册信息，默认30秒
+#    registry-fetch-interval-seconds:
+#  #续约发送间隔，默认30秒
+#  instance:
+#    lease-renewal-interval-in-seconds: 5
+
 
