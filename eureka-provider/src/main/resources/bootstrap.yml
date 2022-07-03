@@ -9,5 +9,5 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://euk1.com:7001/eureka/
+      defaultZone: http://wangsong:wang123@euk1.com:7001/eureka/
 

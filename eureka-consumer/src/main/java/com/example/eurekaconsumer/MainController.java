@@ -26,6 +26,9 @@ public class MainController {
 	
 	@Autowired
 	LoadBalancerClient lb;
+
+	@Autowired
+	RestTemplate restTemplate;
 	
 	
 	@GetMapping("/getHi")
@@ -112,13 +115,22 @@ public class MainController {
 		ServiceInstance instance = lb.choose("provider");
 		
 		String url ="http://" + instance.getHost() +":"+ instance.getPort() + "/getHi";
-		   
-		RestTemplate restTemplate = new RestTemplate();
-		   
+
 		String respStr = restTemplate.getForObject(url, String.class);
 		   
-		System.out.println("respStr"  + respStr);
+		System.out.println(respStr);
 
-		return "xxoo";
+		return respStr;
+	}
+
+	@GetMapping("/client6")
+	public Object client6() {
+
+		String url ="http://provider/getHi";
+
+		String respStr = restTemplate.getForObject(url, String.class);
+		System.out.println(respStr);
+
+		return respStr;
 	}
 }
