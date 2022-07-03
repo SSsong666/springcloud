@@ -6,15 +6,11 @@ spring:
     prefer-file-system-access: false
   application:
     name: consumer
-  security:
-    user:
-      name: wangsong
-      password: wang123
 eureka:
   client:
     #将服务注册到的地址
     service-url:
-      defaultZone: http://euk1.com:7001/eureka/
+      defaultZone: http://wangsong:wang123@euk1.com:7001/eureka/
     #eureka client间隔多久拉取服务注册信息，默认30秒
     registry-fetch-interval-seconds: 5
     #将自己真正健康的状态上传到server

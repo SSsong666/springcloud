@@ -6,12 +6,19 @@ eureka:
     register-with-eureka: false
     #从Eureka服务上获取注册信息
     fetch-registry: false
+  #关闭自我保护
+  server:
+    enable-self-preservation: false
 spring:
   application:
     name: EurekaServer
 #  是否优先从文件系统加载template，这里是个坑，有的电脑不配置freemarker页面报404找不到服务列表
   freemarker:
     prefer-file-system-access: false
+  security:
+    user:
+      name: wangsong
+      password: wang123
 
 
 #eureka30秒发送一次心跳，90秒没有看到更新信息，就在注册表里删除实例
